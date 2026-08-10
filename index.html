@@ -65,77 +65,84 @@ h1{font-family:Georgia,serif;font-size:clamp(28px,6vw,52px);margin:0;color:var(-
       <div class="card"><strong>⛰️ Địa chỉ sản xuất</strong>Quản Bạ, Tuyên Quang.</div>
     </div>
   </div>
-  <!-- ===== KHU VỰC SẢN PHẨM ===== -->
-<section class="products-section">
-    <div class="products-title">
-        <span>SẢN PHẨM</span>
-        <h2>Sản phẩm Cao Nguyên Tửu</h2>
-        <p>Những sản phẩm mang hương vị đặc trưng của vùng đất Tuyên Quang.</p>
+  <section class="product-section">
+    <div class="section-heading">
+        <div class="section-label">SẢN PHẨM</div>
+        <h2>Cao Nguyên Tửu</h2>
+        <p>Đặc sản mang hương vị vùng đất Tuyên Quang</p>
     </div>
 
-    <div class="products-grid">
+    <div class="product-list">
 
-        <!-- SẢN PHẨM 1 -->
+        <!-- Ô sản phẩm -->
         <div class="product-card">
-            <div class="product-image">
-                <img src="san-pham-1.jpg" alt="Sản phẩm Cao Nguyên Tửu">
+
+            <div class="product-img">
+                <img src="san-pham-1.jpg" alt="Cao Nguyên Tửu">
             </div>
 
-            <div class="product-info">
+            <div class="product-content">
+
+                <div class="product-category">
+                    ĐẶC SẢN TUYÊN QUANG
+                </div>
+
                 <h3>Cao Nguyên Tửu</h3>
-                <p>
-                    Sản phẩm đặc trưng mang hương vị truyền thống
-                    của vùng đất Cao Nguyên, Tuyên Quang.
+
+                <p class="product-description">
+                    Sản phẩm mang hương vị đặc trưng,
+                    được giới thiệu từ vùng đất Cao Nguyên,
+                    Tuyên Quang.
                 </p>
 
-                <div class="product-detail">
-                    <span>Đặc sản Tuyên Quang</span>
+                <div class="product-info-row">
+                    <span>⭐ Sản phẩm đặc trưng</span>
+                    <span>📍 Tuyên Quang</span>
                 </div>
-            </div>
-        </div>
 
+                <button class="product-button"
+                        onclick="showProduct('Cao Nguyên Tửu')">
+                    Xem sản phẩm
+                </button>
 
-        <!-- SẢN PHẨM 2 -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="san-pham-2.jpg" alt="Sản phẩm đặc sản Tuyên Quang">
-            </div>
-
-            <div class="product-info">
-                <h3>Sản phẩm đặc sản</h3>
-                <p>
-                    Hương vị truyền thống, mang nét đặc trưng
-                    của vùng đất Tuyên Quang.
-                </p>
-
-                <div class="product-detail">
-                    <span>Đặc sản địa phương</span>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- SẢN PHẨM 3 -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="san-pham-3.jpg" alt="Đặc sản Cao Nguyên">
-            </div>
-
-            <div class="product-info">
-                <h3>Sản phẩm mới</h3>
-                <p>
-                    Thông tin mô tả sản phẩm của bạn có thể
-                    đặt ở đây.
-                </p>
-
-                <div class="product-detail">
-                    <span>Cao Nguyên Tửu</span>
-                </div>
             </div>
         </div>
 
     </div>
 </section>
+
+
+<!-- Hộp thông tin khi bấm -->
+<div id="productPopup" class="product-popup">
+
+    <div class="popup-box">
+
+        <button class="popup-close" onclick="closeProduct()">
+            ×
+        </button>
+
+        <h2 id="popupTitle">Cao Nguyên Tửu</h2>
+
+        <p>
+            Thông tin chi tiết về sản phẩm sẽ được hiển thị
+            tại đây.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+function showProduct(name) {
+    document.getElementById("popupTitle").innerText = name;
+    document.getElementById("productPopup").style.display = "flex";
+}
+
+function closeProduct() {
+    document.getElementById("productPopup").style.display = "none";
+}
+</script>
   <div class="footer">CAO NGUYÊN TỬU · TINH HOA RƯỢU VIỆT<br>Thiết kế:Lưu Tuấn Anh</div>
 </div>
 </body>
