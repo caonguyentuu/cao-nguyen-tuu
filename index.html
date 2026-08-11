@@ -98,6 +98,308 @@ h1{font-family:Georgia,serif;font-size:clamp(28px,6vw,52px);margin:0;color:var(-
     color: #ead7b8;
     font-size: 16px;
 }
+  /* ==============================
+   KHU VỰC SẢN PHẨM
+================================ */
+
+.product-section {
+    margin: 45px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-label {
+    color: #d7ad55;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #f7ead0;
+    font-size: 34px;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    color: #cdbb9a;
+}
+
+
+/* ==============================
+   CARD SẢN PHẨM
+================================ */
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #24150c,
+        #160d08
+    );
+
+    border: 1px solid #8b6a35;
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,0.5);
+}
+
+
+/* ẢNH */
+
+.product-img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #111;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.06);
+}
+
+
+/* NỘI DUNG */
+
+.product-content {
+    padding: 25px;
+}
+
+.product-category {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #8d241b;
+
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.product-content h3 {
+    margin: 15px 0 10px;
+
+    color: #d7ad55;
+
+    font-size: 25px;
+}
+
+.product-description {
+    color: #ddd;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    min-height: 75px;
+}
+
+
+/* THÔNG TIN */
+
+.product-info-row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin: 18px 0;
+
+    color: #cdbb9a;
+
+    font-size: 13px;
+}
+
+
+/* NÚT */
+
+.product-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d7ad55;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #8d241b,
+        #651812
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.product-button:hover {
+    background: #a82b20;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   POPUP
+================================ */
+
+.product-popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.75);
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+.popup-box {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: #160d08;
+
+    border: 1px solid #d7ad55;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+
+    color: #eee;
+}
+
+.popup-box h2 {
+    color: #d7ad55;
+
+    margin-top: 0;
+}
+
+.popup-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #8d241b;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   ĐIỆN THOẠI
+================================ */
+
+@media (max-width: 900px) {
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-img {
+        height: 260px;
+    }
+
+}
+  .product-img {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #24150e;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
     </style>
 </head>
 </style>
