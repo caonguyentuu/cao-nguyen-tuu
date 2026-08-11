@@ -169,55 +169,6 @@ h1{font-family:Georgia,serif;font-size:clamp(28px,6vw,52px);margin:0;color:var(-
                     được giới thiệu từ vùng đất Cao Nguyên,
                     Tuyên Quang.
                 </p>
-
-                <div class="product-info-row">
-                    <span>⭐ Sản phẩm đặc trưng</span>
-                    <span>📍 Tuyên Quang</span>
-                </div>
-
-                <button class="product-button"
-                        onclick="showProduct('Cao Nguyên Tửu')">
-                    Xem sản phẩm
-                </button>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- Hộp thông tin khi bấm -->
-<div id="productPopup" class="product-popup">
-
-    <div class="popup-box">
-
-        <button class="popup-close" onclick="closeProduct()">
-            ×
-        </button>
-
-        <h2 id="popupTitle">Cao Nguyên Tửu</h2>
-
-        <p>
-            Thông tin chi tiết về sản phẩm sẽ được hiển thị
-            tại đây.
-        </p>
-
-    </div>
-
-</div>
-
-
-<script>
-function showProduct(name) {
-    document.getElementById("popupTitle").innerText = name;
-    document.getElementById("productPopup").style.display = "flex";
-}
-
-function closeProduct() {
-    document.getElementById("productPopup").style.display = "none";
-}
-</script>
   </div>
   <div class="footer">CAO NGUYÊN TỬU · TINH HOA RƯỢU VIỆT<br>Thiết kế:Gia Cát Lượng</div>
 </div>
