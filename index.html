@@ -64,6 +64,84 @@ h1{font-family:Georgia,serif;font-size:clamp(28px,6vw,52px);margin:0;color:var(-
       <div class="card"><strong>🏺 Ủ men truyền thống</strong>Gìn giữ bí quyết truyền thống và nét văn hóa Việt.</div>
       <div class="card"><strong>⛰️ Địa chỉ sản xuất</strong>Quản Bạ, Tuyên Quang.</div>
     </div>
+    <section class="product-section">
+    <div class="section-heading">
+        <div class="section-label">Rượu men lá nguyên chất</div>
+        <h2>Cao Nguyên Tửu</h2>
+        <p>Đặc sản mang hương vị vùng đất Tuyên Quang</p>
+    </div>
+
+    <div class="product-list">
+
+        <!-- Ô sản phẩm -->
+        <div class="product-card">
+
+            <div class="product-img">
+                <img src="ruou1.jpg" alt="Cao Nguyên Tửu">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-category">
+                    ĐẶC SẢN TUYÊN QUANG
+                </div>
+
+                <h3>Cao Nguyên Tửu</h3>
+
+                <p class="product-description">
+                    Sản phẩm mang hương vị đặc trưng,
+                    được giới thiệu từ vùng đất Cao Nguyên,
+                    Tuyên Quang.
+                </p>
+
+                <div class="product-info-row">
+                    <span>⭐ Sản phẩm đặc trưng</span>
+                    <span>📍 Tuyên Quang</span>
+                </div>
+
+                <button class="product-button"
+                        onclick="showProduct('Cao Nguyên Tửu')">
+                    Xem sản phẩm
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Hộp thông tin khi bấm -->
+<div id="productPopup" class="product-popup">
+
+    <div class="popup-box">
+
+        <button class="popup-close" onclick="closeProduct()">
+            ×
+        </button>
+
+        <h2 id="popupTitle">Cao Nguyên Tửu</h2>
+
+        <p>
+            Thông tin chi tiết về sản phẩm sẽ được hiển thị
+            tại đây.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+function showProduct(name) {
+    document.getElementById("popupTitle").innerText = name;
+    document.getElementById("productPopup").style.display = "flex";
+}
+
+function closeProduct() {
+    document.getElementById("productPopup").style.display = "none";
+}
+</script>
   </div>
   <div class="footer">CAO NGUYÊN TỬU · TINH HOA RƯỢU VIỆT<br>Thiết kế:Lưu Tuấn Anh</div>
 </div>
